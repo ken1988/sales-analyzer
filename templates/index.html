@@ -3,13 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+
 <!-- jquery load start -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <!-- jquery load end -->
 
+<!-- riot load -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.13.2/riot+compiler.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.13.2/riot.min.js"></script>
+
+<script src="./js/fileapi.js"></script>
+
 <title>Loader</title>
 <body>
-{{ text }}
+<div class="uk-card">
+<h3 class="uk-card-title">CSVファイルアップロード</h3>
+<form class="uk-card-body">
+<input type="file" name="sales_csv" id="sales_csv"></input>
+</form>
+<pre id="preview"></pre>
+</div>
+<div>
+<form action="/ins" method="POST">
+<input type="submit" value="送信"><input type="reset" value="リセット">
+</form>
+</div>
 </body>
 </html>
